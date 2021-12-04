@@ -1,7 +1,8 @@
 import tweepy
-import pandas as pd
 import time
 
+
+# DEPRECATED: main content has been moved to colab
 # global authentication parameters
 consumer_key = "2HqMH7JkCUEeGrMUAgOnvrQVv"
 consumer_secret = "DOhOmTDq2IGMPUIKIWGlBX0i03RvA2TuAZ3kCJ9YAbGj4nJL4N"
@@ -16,17 +17,17 @@ def main():
     api = tweepy.API(auth, wait_on_rate_limit=True)
 
     # toy example to get started
-    text_query = 'COVID'
-    count = 3
+    text_query = "COVID" + " -filter:retweets"
+    count = 10
     try:
         # Creation of query method using parameters
-        tweets = tweepy.Cursor(api.search_tweets, lang="en", q=text_query).items(count)
+        tweets = tweepy.Cursor(api.search_tweets,
+                               until="2021-12-02",
+                               lang="en",
+                               q=text_query).items(count)
 
         # Pulling information from tweets iterable object
         tweets_list = [tweet.text for tweet in tweets]
-
-        for tweet in tweets_list:
-            print(tweet)
 
     except BaseException as e:
         print('failed on_status,', str(e))
