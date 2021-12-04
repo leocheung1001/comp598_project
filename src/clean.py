@@ -63,7 +63,7 @@ def save_json(data, file_name):
     result = []
 
     for text in data:
-        new_json = {"text": text, "topic": "", "sentiment": "n"}
+        new_json = {"text": text, "topic": "", "sentiment": "negative"}
         result.append(new_json)
 
     with open("../data/annotated_" + file_name, "w") as f:
