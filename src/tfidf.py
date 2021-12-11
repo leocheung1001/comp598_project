@@ -100,4 +100,4 @@ if __name__ == '__main__':
             combined_res[topics[topic]][w] = sentiment_res[topic][w]
     print(f"top 10 tfidf words by topic and sentiment: {combined_res}")
     with open('../result/topic_and_sentiment.json', 'w') as f:
-        json.dump(topic_top_10, f, indent=4)
+        json.dump(combined_res, f, indent=4)

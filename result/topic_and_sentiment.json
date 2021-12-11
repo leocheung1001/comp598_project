@@ -1,74 +1,314 @@
 {
-    "legal and policy": [
-        "federal",
-        "court",
-        "claim",
-        "emergency",
-        "interchangeable",
-        "judge",
-        "licensed",
-        "authorization",
-        "deals",
-        "patent"
-    ],
-    "vaccination experience": [
-        "im",
-        "getting",
-        "arm",
-        "dies",
-        "body",
-        "reaction",
-        "flu",
-        "plumber",
-        "hours",
-        "feel"
-    ],
-    "infected experience": [
-        "family",
-        "ones",
-        "symptoms",
-        "vaxed",
-        "fever",
-        "sore",
-        "lost",
-        "positive",
-        "sick",
-        "august"
-    ],
-    "opinions to vaccine": [
-        "toxic",
-        "effective",
-        "mortality",
-        "lower",
-        "johnson",
-        "caused",
-        "completely",
-        "money",
-        "protection",
-        "billion"
-    ],
-    "opinions to covid": [
-        "cheap",
-        "counter",
-        "treatments",
-        "world",
-        "dead",
-        "hard",
-        "killed",
-        "masks",
-        "low",
-        "news"
-    ],
-    "third party": [
-        "wednesday",
-        "boss",
-        "decreasingadding",
-        "effectiveness",
-        "study",
-        "reaction",
-        "revealed",
-        "oral",
-        "variant",
-        "scientists"
-    ]
+    "legal and policy": {
+        "federal": {
+            "positive": 0,
+            "neutral": 12,
+            "negative": 1
+        },
+        "court": {
+            "positive": 0,
+            "neutral": 8,
+            "negative": 2
+        },
+        "claim": {
+            "positive": 0,
+            "neutral": 8,
+            "negative": 0
+        },
+        "emergency": {
+            "positive": 0,
+            "neutral": 8,
+            "negative": 0
+        },
+        "interchangeable": {
+            "positive": 0,
+            "neutral": 8,
+            "negative": 0
+        },
+        "judge": {
+            "positive": 0,
+            "neutral": 11,
+            "negative": 0
+        },
+        "licensed": {
+            "positive": 0,
+            "neutral": 6,
+            "negative": 0
+        },
+        "authorization": {
+            "positive": 0,
+            "neutral": 9,
+            "negative": 0
+        },
+        "deals": {
+            "positive": 0,
+            "neutral": 7,
+            "negative": 0
+        },
+        "patent": {
+            "positive": 0,
+            "neutral": 8,
+            "negative": 2
+        }
+    },
+    "vaccination experience": {
+        "im": {
+            "positive": 5,
+            "neutral": 7,
+            "negative": 1
+        },
+        "getting": {
+            "positive": 8,
+            "neutral": 3,
+            "negative": 7
+        },
+        "arm": {
+            "positive": 4,
+            "neutral": 0,
+            "negative": 7
+        },
+        "dies": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 10
+        },
+        "body": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 3
+        },
+        "reaction": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 7
+        },
+        "flu": {
+            "positive": 4,
+            "neutral": 6,
+            "negative": 4
+        },
+        "plumber": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 5
+        },
+        "hours": {
+            "positive": 2,
+            "neutral": 0,
+            "negative": 6
+        },
+        "feel": {
+            "positive": 6,
+            "neutral": 1,
+            "negative": 4
+        }
+    },
+    "infected experience": {
+        "family": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 4
+        },
+        "ones": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 2
+        },
+        "symptoms": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 1
+        },
+        "vaxed": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 2
+        },
+        "fever": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+        },
+        "sore": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+        },
+        "lost": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 2
+        },
+        "positive": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 1
+        },
+        "sick": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 2
+        },
+        "august": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 0
+        }
+    },
+    "opinions to vaccine": {
+        "toxic": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 8
+        },
+        "effective": {
+            "positive": 10,
+            "neutral": 5,
+            "negative": 4
+        },
+        "mortality": {
+            "positive": 0,
+            "neutral": 1,
+            "negative": 6
+        },
+        "lower": {
+            "positive": 5,
+            "neutral": 1,
+            "negative": 3
+        },
+        "johnson": {
+            "positive": 2,
+            "neutral": 2,
+            "negative": 10
+        },
+        "caused": {
+            "positive": 2,
+            "neutral": 1,
+            "negative": 2
+        },
+        "completely": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 4
+        },
+        "money": {
+            "positive": 1,
+            "neutral": 1,
+            "negative": 10
+        },
+        "protection": {
+            "positive": 5,
+            "neutral": 1,
+            "negative": 6
+        },
+        "billion": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 7
+        }
+    },
+    "opinions to covid": {
+        "cheap": {
+            "positive": 0,
+            "neutral": 1,
+            "negative": 2
+        },
+        "counter": {
+            "positive": 0,
+            "neutral": 1,
+            "negative": 2
+        },
+        "treatments": {
+            "positive": 0,
+            "neutral": 1,
+            "negative": 3
+        },
+        "world": {
+            "positive": 0,
+            "neutral": 1,
+            "negative": 5
+        },
+        "dead": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 2
+        },
+        "hard": {
+            "positive": 0,
+            "neutral": 1,
+            "negative": 1
+        },
+        "killed": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 2
+        },
+        "masks": {
+            "positive": 1,
+            "neutral": 0,
+            "negative": 1
+        },
+        "low": {
+            "positive": 0,
+            "neutral": 1,
+            "negative": 2
+        },
+        "news": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 3
+        }
+    },
+    "third party": {
+        "wednesday": {
+            "positive": 1,
+            "neutral": 4,
+            "negative": 14
+        },
+        "boss": {
+            "positive": 0,
+            "neutral": 3,
+            "negative": 14
+        },
+        "decreasingadding": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 14
+        },
+        "effectiveness": {
+            "positive": 5,
+            "neutral": 2,
+            "negative": 14
+        },
+        "study": {
+            "positive": 10,
+            "neutral": 18,
+            "negative": 5
+        },
+        "reaction": {
+            "positive": 0,
+            "neutral": 1,
+            "negative": 17
+        },
+        "revealed": {
+            "positive": 0,
+            "neutral": 0,
+            "negative": 17
+        },
+        "oral": {
+            "positive": 1,
+            "neutral": 9,
+            "negative": 0
+        },
+        "variant": {
+            "positive": 1,
+            "neutral": 23,
+            "negative": 16
+        },
+        "scientists": {
+            "positive": 1,
+            "neutral": 7,
+            "negative": 1
+        }
+    }
 }
