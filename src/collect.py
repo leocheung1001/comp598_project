@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # set width of bar
-barWidth = 0.25
+barWidth = 0.15
 fig = plt.subplots(figsize=(12, 8))
 
 # set height of bar
@@ -26,11 +26,12 @@ plt.bar(br3, selected, width=barWidth,
         edgecolor='grey', label='Num of Selected Tweets')
 
 # Adding Xticks
-plt.xlabel('Date', fontsize=15)
-plt.ylabel('Number of tweets', fontsize=15)
+plt.xlabel('Date', fontsize=30)
+plt.ylabel('Number of tweets', fontsize=30)
 plt.xticks([r + barWidth for r in range(len(raw))],
-           ['December 1st', 'December 2nd', 'December 3rd'])
-plt.title("Data cleaning in collection phase", fontsize=20)
-plt.legend()
+           ['December 1st', 'December 2nd', 'December 3rd'], fontsize=20)
+plt.title("Data cleaning in collection phase", fontsize=35)
+plt.yticks(fontsize=20)
+plt.legend(prop={"size":20})
 plt.savefig('../result/figures/data_collection.png')
 plt.show()
