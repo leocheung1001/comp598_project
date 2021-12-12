@@ -40,14 +40,14 @@ def get_word_count(data, stopwords):
         topic = row['topic']
         sentiment = row['sentiment']
         text = row['text'].lower()
+        topic_count[topics[topic]] += 1
+        sentiment_res[sentiments[sentiment]] += 1
+        combined_res[topics[topic]][sentiments[sentiment]] += 1
         lst = process_line(text, stopwords)
         for l in lst:
             if l not in res[topic]:
                 res[topic][l] = 0
-            topic_count[topics[topic]] += 1
             res[topic][l] += 1
-            sentiment_res[sentiments[sentiment]] += 1
-            combined_res[topics[topic]][sentiments[sentiment]] += 1
             total_wc[l] += 1
     filtered_res = {p: dict() for p in topics.keys()}
     for p in topics.keys():

@@ -1,32 +1,32 @@
 {
     "legal and policy": {
-        "positive": 232,
-        "neutral": 982,
-        "negative": 254
+        "positive": 14,
+        "neutral": 61,
+        "negative": 16
     },
     "vaccination experience": {
-        "positive": 982,
-        "neutral": 613,
-        "negative": 1225
+        "positive": 69,
+        "neutral": 42,
+        "negative": 82
     },
     "infected experience": {
-        "positive": 110,
-        "neutral": 41,
-        "negative": 299
+        "positive": 7,
+        "neutral": 3,
+        "negative": 18
     },
     "opinions to vaccine": {
-        "positive": 659,
-        "neutral": 682,
-        "negative": 2461
+        "positive": 48,
+        "neutral": 57,
+        "negative": 163
     },
     "opinions to covid": {
-        "positive": 175,
-        "neutral": 360,
-        "negative": 643
+        "positive": 11,
+        "neutral": 30,
+        "negative": 41
     },
     "third party": {
-        "positive": 1035,
-        "neutral": 2862,
-        "negative": 997
+        "positive": 64,
+        "neutral": 203,
+        "negative": 71
     }
 }
