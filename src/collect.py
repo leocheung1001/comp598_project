@@ -32,5 +32,5 @@ plt.xticks([r + barWidth for r in range(len(raw))],
            ['December 1st', 'December 2nd', 'December 3rd'])
 plt.title("Data cleaning in collection phase", fontsize=20)
 plt.legend()
-plt.show()
 plt.savefig('../result/figures/data_collection.png')
+plt.show()
