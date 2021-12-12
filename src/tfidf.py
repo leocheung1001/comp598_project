@@ -32,7 +32,9 @@ def process_line(line, stopwords):
 def get_word_count(data, stopwords):
     res = {p: dict() for p in topics.keys()}
     total_wc = defaultdict(lambda: 0)
-    sentiment_res = {p: dict() for p in topics.keys()}
+    sentiment_res = {p: 0 for p in sentiments.values()}
+    combined_res = {p: {"positive": 0, "neutral": 0, "negative": 0} for p in topics.values()}
+    topic_count = {p: 0 for p in topics.values()}
 
     for row in data:
         topic = row['topic']
@@ -42,19 +44,20 @@ def get_word_count(data, stopwords):
         for l in lst:
             if l not in res[topic]:
                 res[topic][l] = 0
-                sentiment_res[topic][l] = {k: 0 for k in sentiments.values()}
+            topic_count[topics[topic]] += 1
             res[topic][l] += 1
-            sentiment_res[topic][l][sentiments[sentiment]] += 1
+            sentiment_res[sentiments[sentiment]] += 1
+            combined_res[topics[topic]][sentiments[sentiment]] += 1
             total_wc[l] += 1
     filtered_res = {p: dict() for p in topics.keys()}
     for p in topics.keys():
         for key, item in res[p].items():
             if total_wc[key] >= 5:
                 filtered_res[p][key] = item
-    return filtered_res, sentiment_res
+    return filtered_res, sentiment_res, combined_res, topic_count
 
 
-def tf_idf(wc, length=10):
+def tf_idf(wc, length=15):
     num = len(topics)
 
     word_usage = defaultdict(lambda: 0)
@@ -85,19 +88,17 @@ if __name__ == '__main__':
     with open('../data/annotated.json') as f:
         data = json.load(f)
 
-    data, sentiment_res = get_word_count(data, stopwords)
+    data, sentiment_count, topic_and_sentiment, topic_count = get_word_count(data, stopwords)
     res = tf_idf(data)
     topic_top_10 = {p: dict() for p in topics.values()}
     for topic, words in res.items():
         topic_top_10[topics[topic]] = words
-    print(f"top 10 tfidf words by topic: {topic_top_10}")
+    # print(f"top 10 tfidf words by topic: {topic_top_10}")
     with open('../result/tfidf_topic.json', 'w') as f:
         json.dump(topic_top_10, f, indent=4)
-
-    combined_res = {p: dict() for p in topics.values()}
-    for topic, words in res.items():
-        for w in words:
-            combined_res[topics[topic]][w] = sentiment_res[topic][w]
-    print(f"top 10 tfidf words by topic and sentiment: {combined_res}")
+    with open('../result/sentiment_count.json', 'w') as f:
+        json.dump(sentiment_count, f, indent=4)
     with open('../result/topic_and_sentiment.json', 'w') as f:
-        json.dump(combined_res, f, indent=4)
+        json.dump(topic_and_sentiment, f, indent=4)
+    with open('../result/topic_count.json', 'w') as f:
+        json.dump(topic_count, f, indent=4)

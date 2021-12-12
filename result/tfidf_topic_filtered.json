@@ -9,17 +9,10 @@
         "interchangeable",
         "comirnaty",
         "emergency",
-        "judge",
-        "patent",
-        "decision",
-        "district",
-        "pfizers",
-        "fda"
+        "judge"
     ],
     "vaccination experience": [
         "sore",
-        "im",
-        "ive",
         "dies",
         "fine",
         "experience",
@@ -28,10 +21,7 @@
         "card",
         "fever",
         "pain",
-        "plumber",
-        "tired",
-        "astra",
-        "boosted"
+        "tired"
     ],
     "infected experience": [
         "sore",
@@ -43,62 +33,42 @@
         "school",
         "vaxed",
         "breakthrough",
-        "event",
-        "fever",
-        "plumber",
-        "tired",
-        "guess",
-        "lost"
+        "fever"
     ],
     "opinions to vaccine": [
         "toxic",
         "lower",
         "caused",
         "completely",
-        "giving",
         "money",
         "disease",
         "fatality",
-        "ceo",
-        "johnson",
         "claims",
         "cure",
-        "delta",
-        "mean",
-        "vaccinations"
+        "delta"
     ],
     "opinions to covid": [
         "cheap",
         "counter",
         "hard",
-        "mean",
-        "ppl",
         "pandemic",
         "fear",
         "believe",
         "dead",
-        "follow",
         "current",
         "low",
-        "using",
-        "ago",
         "fda"
     ],
     "third party": [
-        "boss",
-        "decreasingadding",
         "effectiveness",
         "study",
         "scientists",
         "researchers",
-        "wednesday",
         "canada",
         "oral",
         "targeting",
         "clinic",
         "revealed",
-        "event",
-        "bla",
-        "batch"
+        "event"
     ]
 }
