@@ -57,7 +57,7 @@ def plot_topic_and_sentiment():
         res = json.load(f)
     # set width of bar
     barWidth = 0.25
-    fig = plt.subplots(figsize=(20, 15))
+    fig = plt.subplots(figsize=(20, 15.5))
 
     # set height of bar
     positive = [res[k]['positive'] for k in res.keys()]
@@ -80,13 +80,13 @@ def plot_topic_and_sentiment():
     plt.bar(br3, negative, color=colors[2], width=barWidth, label='negative')
 
     # Adding Xticks
-    plt.xlabel('Topic', fontsize=25)
-    plt.ylabel('Number of tweets', fontsize=25)
+    plt.xlabel('Topic', fontsize=35)
+    plt.ylabel('Number of tweets', fontsize=35)
     plt.xticks([r + barWidth for r in range(len(positive))], list(res.keys()), fontsize=20, rotation=15, ha='right')
     plt.yticks(fontsize=20)
 
-    plt.title('Tweet count by sentiment for each topic', fontsize=30)
-    plt.legend(prop={"size":20})
+    plt.title('Tweet count by sentiment for each topic', fontsize=50)
+    plt.legend(prop={"size":25})
     plt.savefig('../result/figures/topic_and_sentiment_bar_chart.png')
 
 
