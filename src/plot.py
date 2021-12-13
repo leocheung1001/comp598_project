@@ -28,8 +28,8 @@ def plot_topic_dist():
 
     # Creating plot
     fig, ax = plt.subplots(figsize=(10, 7))
-    ax.pie(d, colors=colors, autopct=lambda pct: func(pct, d), labels=topics, startangle=90)
-    plt.title('Tweet count by topic')
+    ax.pie(d, colors=colors, autopct=lambda pct: func(pct, d), labels=topics, startangle=90, textprops={'fontsize': 15})
+    plt.title('Tweet count by topic', fontsize=35)
     plt.savefig('../result/figures/topic_pie_chart.png')
 
 
@@ -47,8 +47,8 @@ def plot_sentiment_dist():
 
     # Creating plot
     fig, ax = plt.subplots(figsize=(10, 7))
-    ax.pie(d, colors=colors, autopct=lambda pct: func(pct, d), labels=topics, startangle=90)
-    plt.title('Tweet count by sentiment')
+    ax.pie(d, colors=colors, autopct=lambda pct: func(pct, d), labels=topics, startangle=90, textprops={'fontsize': 15})
+    plt.title('Tweet count by sentiment', fontsize=35)
     plt.savefig('../result/figures/sentiment_pie_chart.png')
 
 
@@ -57,7 +57,7 @@ def plot_topic_and_sentiment():
         res = json.load(f)
     # set width of bar
     barWidth = 0.25
-    fig = plt.subplots(figsize=(12, 8))
+    fig = plt.subplots(figsize=(20, 15))
 
     # set height of bar
     positive = [res[k]['positive'] for k in res.keys()]
@@ -80,12 +80,13 @@ def plot_topic_and_sentiment():
     plt.bar(br3, negative, color=colors[2], width=barWidth, label='negative')
 
     # Adding Xticks
-    plt.xlabel('Topic')
-    plt.ylabel('Number of tweets')
-    plt.xticks([r + barWidth for r in range(len(positive))], list(res.keys()))
+    plt.xlabel('Topic', fontsize=25)
+    plt.ylabel('Number of tweets', fontsize=25)
+    plt.xticks([r + barWidth for r in range(len(positive))], list(res.keys()), fontsize=20, rotation=15, ha='right')
+    plt.yticks(fontsize=20)
 
-    plt.title('Tweet count by sentiment for each topic')
-    plt.legend()
+    plt.title('Tweet count by sentiment for each topic', fontsize=30)
+    plt.legend(prop={"size":20})
     plt.savefig('../result/figures/topic_and_sentiment_bar_chart.png')
 
 
